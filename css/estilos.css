@@ -89,7 +89,26 @@ footer{
     width: 30%;
     margin: 10px;
     box-shadow: 0px 2px 6px rgb(0, 0, 0,1);
-    
+}
+/*Diseño responsivo*/
+@media(max-width: 768px){
+    /*Cambia la orientacion a columnas del menu*/
+    nav ul{
+        flex-direction: column;
 
+    }
+    /*Ajustar los margenes superiores entre cada menú*/
+    nav ul li{
+         margin: 10px 0;
 
+    }
+    /*Colocando las tarjetas una debajo de otra*/
+    .tarjetas{
+        flex-direction: column;
+        align-items: center;
+    }
+    /*Cada tarjeta ocupa el 80% del espacio disponible*/
+    .tarjeta{
+        width: 80%;
+    }
 }
