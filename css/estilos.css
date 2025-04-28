@@ -1,0 +1,95 @@
+/*Aplicando reglas universales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+    /* Estilos generales del sitio*/
+    body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+        background-color: #f0f2f5;
+        color:#333
+}
+/* Definir el estilo del encabezado*/
+header {
+    background-color: #d8c7f1f2;
+    padding: 20px;
+    text-align: center;
+
+}
+/* Estilo del logo */
+.logo{
+    width: 100px;
+}
+/* Configurar o dar estilo del navegador*/
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+/* Estilo de los items de la lista*/
+nav ul li {
+    margin: 0 15px;
+}
+/* Estilos a los enlaces del navegador*/
+nav ul li a{
+    color:black;
+    text-decoration:none;
+    font-weight: bold;
+}
+/*Estilos a los enlaces cuando se pasa el mouse*/
+nav ul li a :hover{
+    text-decoration: underline;    
+}
+/*Estilo al area principal*/
+main {
+    padding: 30px;
+    text-align: center;
+}
+/*Estilos a la seccion*/
+section{
+    margin-bottom: 40px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,1);
+}
+/* Pie de página*/
+footer{
+    background-color: #333;
+    color:#eee;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+
+}
+/*Estilo de imagenes*/
+    img{
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+        border-radius: 8px;
+
+    }
+/*Estilos de las tarjetas de servicios*/
+.tarjetas{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+
+}
+/*Estilos a cada tarjeta*/
+.tarjeta{
+    background-color:#f0f2f3 ;
+    padding: 20px;
+    border: 2px solid #d8c7f1f2 ;
+    border-radius: 10px;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0px 2px 6px rgb(0, 0, 0,1);
+    
+
+
+}
