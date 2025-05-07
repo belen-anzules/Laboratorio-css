@@ -1,114 +1,169 @@
-/*Aplicando reglas universales */
+/* Aplicando reglas universales */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;}
-    /* Estilos generales del sitio*/
-    body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;   
-        background-color: #f0f2f5;
-        color:#333
+    box-sizing: border-box;
 }
-/* Definir el estilo del encabezado*/
+
+/* Estilos generales del sitio */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+    background-color: #f0f2f5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado */
 header {
     background-color: #d8c7f1f2;
     padding: 20px;
     text-align: center;
-
 }
-/* Estilo del logo */
-.logo{
+
+/* Logo */
+.logo {
     width: 100px;
 }
-/* Configurar o dar estilo del navegador*/
-nav ul{
+
+/* Navegación */
+nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
-/* Estilo de los items de la lista*/
+
 nav ul li {
     margin: 0 15px;
 }
-/* Estilos a los enlaces del navegador*/
-nav ul li a{
-    color:black;
-    text-decoration:none;
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
     font-weight: bold;
 }
-/*Estilos a los enlaces cuando se pasa el mouse*/
-nav ul li a :hover{
+
+nav ul li a:hover {
     text-decoration: underline;    
 }
-/*Estilo al area principal*/
+
+/* Área principal */
 main {
     padding: 30px;
     text-align: center;
+    flex: 1;
 }
-/*Estilos a la seccion*/
-section{
+
+/* Secciones */
+section {
     margin-bottom: 40px;
     padding: 20px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
-/* Pie de página*/
-footer{
+
+/* Pie de página */
+footer {
     background-color: #333;
-    color:#eee;
+    color: #eee;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
-
 }
-/*Estilo de imagenes*/
-    img{
-        width: 100%;
-        height: auto;
-        margin-top: 15px;
-        border-radius: 8px;
 
-    }
-/*Estilos de las tarjetas de servicios*/
-.tarjetas{
+/* Imágenes generales */
+img {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* Tarjetas de servicios */
+.tarjetas {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 20px;
-
-
 }
-/*Estilos a cada tarjeta*/
-.tarjeta{
-    background-color:#f0f2f3 ;
+
+.tarjeta {
+    background-color: #f0f2f3;
     padding: 20px;
-    border: 2px solid #d8c7f1f2 ;
+    border: 2px solid #d8c7f1f2;
     border-radius: 10px;
     width: 30%;
     margin: 10px;
-    box-shadow: 0px 2px 6px rgb(0, 0, 0,1);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
-/*Diseño responsivo*/
-@media(max-width: 768px){
-    /*Cambia la orientacion a columnas del menu*/
-    nav ul{
+
+/* Imágenes en tarjetas */
+.tarjeta img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+/*Boton información*/
+.boton-info {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #a083e8; /* Morado pastel */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.boton-info:hover {
+    background-color: #7e64d6; /* Morado más oscuro */
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave al pasar el mouse */
+}
+
+
+/* Diseño de páginas individuales de planes */
+.contenedor-plan {
+    max-width: 800px;                 /* Ancho máximo */
+    margin: 40px auto;                /* Centrado vertical y horizontal */
+    padding: 30px;
+    background-color: white;         /* Fondo blanco */
+    border-radius: 12px;             /* Bordes redondeados */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    text-align: center;              /* Texto centrado */
+}
+
+.contenedor-plan img {
+    width: 100%;
+    height: 150px;           /* Altura fija más razonable */
+    object-fit: cover;       /* Mantiene el recorte sin deformar */
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    nav ul {
         flex-direction: column;
-
     }
-    /*Ajustar los margenes superiores entre cada menú*/
-    nav ul li{
-         margin: 10px 0;
 
+    nav ul li {
+        margin: 10px 0;
     }
-    /*Colocando las tarjetas una debajo de otra*/
-    .tarjetas{
+
+    .tarjetas {
         flex-direction: column;
         align-items: center;
     }
-    /*Cada tarjeta ocupa el 80% del espacio disponible*/
-    .tarjeta{
+
+    .tarjeta {
         width: 80%;
     }
 }
